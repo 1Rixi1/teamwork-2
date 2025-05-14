@@ -35,10 +35,10 @@ export const ModeToggle = ({ align, side }: ModeToggleProps) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align={align} side={side}>
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          Светлый
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          Темный
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteConfig: Metadata = {
-  title: "Discord Clone",
+  title: "Teamwork",
   description:
     "Real-time chat, voice, and community features in a modern, scalable Next.js 14-powered platform.",
   keywords: [
@@ -44,11 +44,11 @@ export const siteConfig: Metadata = {
     "css",
   ] as Array<string>,
   authors: {
-    name: "Sanidhya Kumar Verma",
-    url: "https://github.com/sanidhyy",
+    name: "Grigorev Maksim",
+    url: "https://github.com/1Rixi1/teamwork-2/tree/main",
   },
 } as const;
 
 export const links = {
-  sourceCode: "https://github.com/sanidhyy/discord-clone",
+  sourceCode: "https://github.com/1Rixi1/teamwork-2/tree/main",
 } as const;

@@ -46,15 +46,15 @@ export const DeleteServerModal = () => {
       <DialogContent className="p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Delete Server
+            Удалить сервер
           </DialogTitle>
 
           <DialogDescription className="text-center">
-            Are you sure you want to do this? <br />
+            Вы уверены, что хотите это сделать? <br />
             <span className="text-indigo-500 font-semibold">
               {server?.name}
             </span>{" "}
-            will be permanently deleted.
+            он будет удалён навсегда.
           </DialogDescription>
         </DialogHeader>
 
@@ -66,7 +66,7 @@ export const DeleteServerModal = () => {
               onClick={onClose}
               variant="ghost"
             >
-              Cancel
+              Отмена
             </Button>
             <Button
               disabled={isLoading}
@@ -74,7 +74,7 @@ export const DeleteServerModal = () => {
               onClick={onClick}
               variant="destructive"
             >
-              Confirm
+              Подтвердить
             </Button>
           </div>
         </DialogFooter>

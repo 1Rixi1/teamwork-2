@@ -29,10 +29,10 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Server name is required.",
+    message: "Имя сервера обязательно.",
   }),
   imageUrl: z.string().min(1, {
-    message: "Server image is required.",
+    message: "Изображение сервера обязательно.",
   }),
 });
 
@@ -73,12 +73,12 @@ export const InitialModal = () => {
       <DialogContent className="p-0 overflow-hidden" hideCloseIcon>
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Create your server
+            Создайте свой сервер
           </DialogTitle>
 
           <DialogDescription className="text-center text-zinc-500">
-            Give your server a personality with a name and an image. You can
-            always change it later.
+            Придайте своему серверу индивидуальность с помощью имени и
+            изображения. Вы всегда сможете изменить его позже.
           </DialogDescription>
         </DialogHeader>
 
@@ -116,7 +116,7 @@ export const InitialModal = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="uppercase text-xs font-bold text-zinc-500">
-                      Server name
+                      Имя сервера
                     </FormLabel>
 
                     <FormControl>
@@ -124,7 +124,7 @@ export const InitialModal = () => {
                         disabled={isLoading}
                         aria-disabled={isLoading}
                         className="dark:bg-zinc-300/10 bg-zinc-300/50 border-0 dark:text-white text-black"
-                        placeholder="Enter server name"
+                        placeholder="Введите имя сервера"
                         {...field}
                       />
                     </FormControl>
@@ -141,7 +141,7 @@ export const InitialModal = () => {
                 aria-disabled={isLoading}
                 variant="primary"
               >
-                Create
+                Создать
               </Button>
             </DialogFooter>
           </form>

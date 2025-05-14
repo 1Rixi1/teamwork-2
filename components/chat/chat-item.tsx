@@ -198,7 +198,7 @@ export const ChatItem = ({
               {content}{" "}
               {isUpdated && !deleted && (
                 <span className="text-[10px] mx-2 text-zinc-500 dark:text-zinc-400">
-                  (edited)
+                  (ред.)
                 </span>
               )}
             </p>
@@ -236,12 +236,12 @@ export const ChatItem = ({
                   size="sm"
                   variant="primary"
                 >
-                  Save
+                  Сохранить
                 </Button>
               </form>
 
               <span className="text-[10px] mt-1 text-zinc-400">
-                Press escape to cancel, enter to save
+                Нажмите escape для отмены или enter для сохранения
               </span>
             </Form>
           )}
@@ -251,7 +251,7 @@ export const ChatItem = ({
       {canDeleteMessage && (
         <div className="md:hidden md:group-hover:flex items-center gap-x-2 absolute p-1 -top-2 right-5 bg-white dark:bg-zinc-800 border rounded-sm">
           {canEditMessage && (
-            <ActionTooltip label="Edit">
+            <ActionTooltip label="Ред.">
               <Edit
                 onClick={() => setIsEditing((prevIsEditing) => !prevIsEditing)}
                 className="cursor-pointer ml-auto mb-2 md:mb-auto w-4 h-4 text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition"
@@ -259,7 +259,7 @@ export const ChatItem = ({
             </ActionTooltip>
           )}
 
-          <ActionTooltip label="Delete">
+          <ActionTooltip label="Удалить">
             <Trash
               onClick={() =>
                 onOpen("deleteMessage", {

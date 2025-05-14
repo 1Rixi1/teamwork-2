@@ -34,7 +34,7 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      if (e.key === "k" && (e.metaKey || e.altKey)) {
         e.preventDefault();
         setOpen((open) => !open);
       }
@@ -67,21 +67,21 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
       >
         <Search className="h-4 w-4 text-zinc-500 dark:text-zinc-400" />
         <p className="font-semibold text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition">
-          Search
+          Поиск
         </p>
         <kbd
           title="Press Ctrl/Cmd + K to open search modal"
           className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground ml-auto"
           aria-disabled
         >
-          <span className="text-xs">⌘</span>K
+          <span className="text-xs">ALT</span>K
         </kbd>
       </button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Search all channels and members" />
+        <CommandInput placeholder="Поиск по всем каналам и участникам" />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+          <CommandEmpty>Результаты не найдены.</CommandEmpty>
 
           {data.map(({ label, type, data: subData }) => {
             if (!subData?.length) return null;

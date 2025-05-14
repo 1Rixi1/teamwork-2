@@ -15,14 +15,14 @@ export const ChatWelcome = ({ name, type }: ChatWelcomeProps) => {
       )}
 
       <p className="text-xl md:text-3xl font-bold">
-        {type === "channel" ? "Welcome to #" : ""}
+        {type === "channel" ? "Добро пожаловать на #" : ""}
         {name}
       </p>
 
       <p className="text-zinc-600 dark:text-zinc-400 text-sm">
         {type === "channel"
-          ? `This is the start of #${name} channel.`
-          : `This is the start of your conversation with ${name}`}
+          ? `Это начало #${name} канала.`
+          : `Это начало вашего разговора с ${name}`}
       </p>
     </div>
   );

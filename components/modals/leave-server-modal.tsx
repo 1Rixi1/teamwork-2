@@ -45,11 +45,11 @@ export const LeaveServerModal = () => {
       <DialogContent className="p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Leave Server
+            Выход с сервера
           </DialogTitle>
 
           <DialogDescription className="text-center">
-            Are you sure you want to leave{" "}
+            Вы уверены, что хотите выйти{" "}
             <span className="font-semibold text-indigo-500">
               {server?.name}
             </span>
@@ -65,7 +65,7 @@ export const LeaveServerModal = () => {
               onClick={onClose}
               variant="ghost"
             >
-              Cancel
+              Отмена
             </Button>
             <Button
               disabled={isLoading}
@@ -73,7 +73,7 @@ export const LeaveServerModal = () => {
               onClick={onClick}
               variant="destructive"
             >
-              Confirm
+              Подтвердить
             </Button>
           </div>
         </DialogFooter>

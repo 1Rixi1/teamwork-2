@@ -18,14 +18,14 @@ const Error = ({
 
   return (
     <div className="h-full flex flex-col items-center justify-center space-y-4">
-      <h2 className="text-xl font-medium">Something went wrong.</h2>
+      <h2 className="text-xl font-medium">Что-то пошло не так.</h2>
 
       <Button variant="secondary" asChild>
-        <Link href="/">Home</Link>
+        <Link href="/">Главная страница</Link>
       </Button>
 
       <Button variant="primary" onClick={() => reset()}>
-        Try again
+        Попробуйте еще раз
       </Button>
     </div>
   );

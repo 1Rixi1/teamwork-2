@@ -124,7 +124,7 @@ discord-clone/
     |-- schema.prisma
   |- public/
     |-- github.png
-    |-- logo.png
+    |-- icon1.png
   |- .env
   |- .env.example
   |- .eslintrc.js

@@ -47,12 +47,12 @@ export const DeleteMessageModal = () => {
       <DialogContent className="p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Delete Message
+            Удалить сообщение
           </DialogTitle>
 
           <DialogDescription className="text-center">
-            Are you sure you want to do this? <br />
-            The message will be will be permanently deleted.
+            Вы уверены, что хотите сделать это ? <br />
+            Сообщение будет удалено безвозвратно.
           </DialogDescription>
         </DialogHeader>
 
@@ -64,7 +64,7 @@ export const DeleteMessageModal = () => {
               onClick={onClose}
               variant="ghost"
             >
-              Cancel
+              Отмена
             </Button>
             <Button
               disabled={isLoading}
@@ -72,7 +72,7 @@ export const DeleteMessageModal = () => {
               onClick={onClick}
               variant="destructive"
             >
-              Confirm
+              Подтвердить
             </Button>
           </div>
         </DialogFooter>

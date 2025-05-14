@@ -39,10 +39,10 @@ const formSchema = z.object({
   name: z
     .string()
     .min(1, {
-      message: "Channel name is required.",
+      message: "Имя канала обязательно.",
     })
     .refine((name) => name !== "general", {
-      message: 'Channel name cannot be "general".',
+      message: "Название канала не может быть «общим».",
     }),
   type: z.nativeEnum(ChannelType),
 });
@@ -99,7 +99,7 @@ export const CreateChannelModal = () => {
       <DialogContent className="p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Create channel
+            Создать канал
           </DialogTitle>
         </DialogHeader>
 
@@ -117,7 +117,7 @@ export const CreateChannelModal = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="uppercase text-xs font-bold text-zinc-500">
-                      Channel name
+                      Название канала
                     </FormLabel>
 
                     <FormControl>
@@ -125,7 +125,7 @@ export const CreateChannelModal = () => {
                         disabled={isLoading}
                         aria-disabled={isLoading}
                         className="dark:bg-zinc-300/10 bg-zinc-300/50 border-0 dark:text-white text-black"
-                        placeholder="Enter channel name"
+                        placeholder="Введите название канала"
                         {...field}
                       />
                     </FormControl>
@@ -140,7 +140,7 @@ export const CreateChannelModal = () => {
                 name="type"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Channel Type</FormLabel>
+                    <FormLabel>Тип канала</FormLabel>
                     <Select
                       disabled={isLoading}
                       onValueChange={field.onChange}
@@ -177,7 +177,7 @@ export const CreateChannelModal = () => {
                 aria-disabled={isLoading}
                 variant="primary"
               >
-                Create
+                Создать
               </Button>
             </DialogFooter>
           </form>

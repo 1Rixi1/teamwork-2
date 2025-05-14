@@ -78,11 +78,11 @@ export const MessageFileModal = () => {
       <DialogContent className="p-0 overflow-hidden" hideCloseIcon>
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Add an attachment
+            Добавить вложение
           </DialogTitle>
 
           <DialogDescription className="text-center text-zinc-500">
-            Send a file as a message.
+            Отправка файла в качестве сообщения.
           </DialogDescription>
         </DialogHeader>
 
@@ -121,7 +121,7 @@ export const MessageFileModal = () => {
                 aria-disabled={isLoading}
                 variant="primary"
               >
-                Send
+                Отправить
               </Button>
             </DialogFooter>
           </form>

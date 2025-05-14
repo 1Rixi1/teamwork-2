@@ -72,9 +72,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
     (member) => member.profileId !== profile.id,
   );
 
-  const role = server.members.find(
-    (member) => member.profileId === profile.id,
-  )?.role;
+  const role = server.members.find((member) => member.profileId === profile.id)
+    ?.role;
 
   return (
     <div className="flex flex-col h-full text-primary w-full dark:bg-[#2B2D31] bg-[#F2F3F5]">
@@ -84,7 +83,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
           <ServerSearch
             data={[
               {
-                label: "Text Channels",
+                label: "Текстовый канал",
                 type: "channel",
                 data: textChannels?.map((channel) => ({
                   id: channel.id,
@@ -93,7 +92,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 })),
               },
               {
-                label: "Voice Channels",
+                label: "Голосовой канал",
                 type: "channel",
                 data: audioChannels?.map((channel) => ({
                   id: channel.id,
@@ -102,7 +101,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 })),
               },
               {
-                label: "Video Channels",
+                label: "Видео канал",
                 type: "channel",
                 data: videoChannels?.map((channel) => ({
                   id: channel.id,
@@ -111,7 +110,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 })),
               },
               {
-                label: "Members",
+                label: "Участники",
                 type: "member",
                 data: members?.map((member) => ({
                   id: member.id,
@@ -130,7 +129,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 sectionType="channels"
                 channelType={ChannelType.TEXT}
                 role={role}
-                label="Text Channels"
+                label="Текстовые Каналы"
               />
 
               <div className="space-y-[2px]">
@@ -152,7 +151,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 sectionType="channels"
                 channelType={ChannelType.AUDIO}
                 role={role}
-                label="Voice Channels"
+                label="Голосовые Каналы"
               />
 
               <div className="space-y-[2px]">
@@ -174,7 +173,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                 sectionType="channels"
                 channelType={ChannelType.VIDEO}
                 role={role}
-                label="Video Channels"
+                label="Видео Каналы"
               />
 
               <div className="space-y-[2px]">
